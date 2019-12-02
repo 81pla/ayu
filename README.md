@@ -1,14 +1,54 @@
-![ayu](https://i.imgur.com/akLUOXg.png)
+![ayu](./images/hero.png)
 
 `ayu` is a simple theme with bright colors and comes in three versions — *dark*, *mirage* and *light* for all day long comfortable work.
-
-### Font
-
-`ayu` uses [__Roboto Mono__](https://www.google.com/fonts/specimen/Roboto+Mono) as main font and it's highly recommended to install it to get monospaced font in filetree. But if you don't have it then the UI theme will downgrade to standard UI font used in Sublime Text.
 
 ### File Icons
 
 `ayu` from version `3.0.0` supports customization via [A File Icon](https://github.com/ihodev/a-file-icon) package. Please install it and restart Sublime for better experience.
+
+### Custom UI fonts
+
+Since verion `5.0.0` monospaced fonts options were removed. But it's still possible to use your favourite font in the
+user interface of the theme, just follow through these simple steps:
+
+![ayu mono](./images/mono.png)
+
+1. Pull up command pallete via <kbd>cmd/ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd>
+2. Type in `Browse packages`
+3. Navigate to the `/User` folder
+4. Create a file named `ayu-mirage.sublime-theme` to modify mirage or `ayu-light.sublime-theme` and `ayu-dark.sublime-theme`
+5. Open that file in Sublime
+6. Copy and paste following content:
+   ```json
+   [
+     {
+       "class": "sidebar_label",
+       "font.face": "PragmataPro Mono Liga"
+     },
+     {
+       "class": "sidebar_heading",
+       "font.face": "PragmataPro Mono Liga"
+     },
+     {
+       "class": "tab_label",
+       "font.face": "PragmataPro Mono Liga"
+     },
+     {
+       "class": "label_control",
+       "font.face": "PragmataPro Mono Liga"
+     },
+     {
+       "class": "quick_panel_label",
+       "font.face": "PragmataPro Mono Liga"
+     },
+     {
+       "class": "quick_panel_path_label",
+       "font.face": "PragmataPro Mono Liga"
+     }
+   ]
+   ```
+7. Replace `PragmataPro Mono Liga` with the font of your choice
+8. Save and enjoy :)
 
 ### Screenshots
 
@@ -34,9 +74,6 @@
 ```js
 "ui_native_titlebar":       true, // use native titlebars on macOs
 "ui_separator":             true, // separators between panels
-"ui_font_size_small":       true, // smaller UI font size(sidebar, statusbar etc)
-"ui_font_source_code_pro":  true, // use Source Code Pro (https://fonts.google.com/specimen/Source+Code+Pro) as UI font
-"ui_font_roboto_mono":      true, // use Roboto Mono (https://fonts.google.com/specimen/Roboto+Mono) as UI font
 "ui_wide_scrollbars":       true, // wider scrollbars
 ```
 
@@ -78,21 +115,21 @@ For light theme:
 
 ```js
 "theme": "ayu-light.sublime-theme",
-"color_scheme": "Packages/ayu/ayu-light.tmTheme",
+"color_scheme": "Packages/ayu/ayu-light.sublime-color-scheme",
 ```
 
 For mirage theme:
 
 ```js
 "theme": "ayu-mirage.sublime-theme",
-"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
+"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 ```
 
 For dark theme:
 
 ```js
 "theme": "ayu-dark.sublime-theme",
-"color_scheme": "Packages/ayu/ayu-dark.tmTheme",
+"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
 ```
 
 ### Sublime Text 2
@@ -105,6 +142,7 @@ and install manually [previous version](https://github.com/dempfi/ayu/releases/t
 - `ayu` for Ace: https://github.com/ayu-theme/ayu-ace
 - `ayu` colors as NPM package: https://github.com/ayu-theme/ayu-colors
 - `ayu` for VSCode: https://github.com/teabyii/vscode-ayu
+- `ayu` for XCode: https://github.com/vburojevic/ayu-xcode-theme
 
 <div align="right"><sup>
   made with ❤️ by <a href="https://github.com/dempfi">@dempfi</a>

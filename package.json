@@ -1,6 +1,6 @@
 {
   "name": "ayu",
-  "version": "0.0.1",
+  "version": "5.0.3",
   "description": "Sublime theme",
   "repository": {
     "type": "git",
@@ -12,22 +12,13 @@
     "url": "https://github.com/dempfi/ayu/issues"
   },
   "scripts": {
-    "watch": "gulp watch",
-    "build": "gulp",
-    "c": "gulp clean"
+    "build": "ts-node ./src/build.ts"
   },
   "homepage": "https://github.com/dempfi/ayu#readme",
-  "devDependencies": {
-    "fs-jetpack": "^0.10.0",
-    "gulp": "^3.9.1",
-    "gulp-exec": "^2.1.2",
-    "lodash": "^4.16.4",
-    "through2": "^2.0.1",
-    "vinyl": "^2.0.0",
-    "yamljs": "^0.2.8",
-    "clear-require": "^2.0.0",
-    "color": "^2.0.0"
-  },
   "dependencies": {
+    "@types/node": "^11.11.6",
+    "ayu": "^7.2.1",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
   }
 }
